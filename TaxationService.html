@@ -84,7 +84,7 @@
             cursor: pointer;
             box-shadow: 0 5px 15px rgba(255, 117, 140, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 2px;
+            margin: 0px;
         }
         .btn:active {
             transform: translateY(2px) scale(0.98);
@@ -92,6 +92,15 @@
         }
     </style>
     <script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let video = document.querySelector(".video-background");
+            video.play().catch(error => {
+                console.log("Autoplay failed. User interaction required.");
+            });
+        });
+
+        
         function goToNextPage() {
             document.body.style.transform = "rotateY(180deg)";
             setTimeout(() => {
@@ -113,7 +122,7 @@
     </script>
 </head>
 <body>
-    <video class="video-background" autoplay muted loop>
+    <video class="video-background"  autoplay muted loop playsinline>
         <source src="1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
