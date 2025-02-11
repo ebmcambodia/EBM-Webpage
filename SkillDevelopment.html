@@ -90,12 +90,7 @@
                 window.location.href = 'Callcenter.html';
             }, 500);
         }
-        function goBack() {
-            document.body.style.transform = "rotateY(-180deg)";
-            setTimeout(() => {
-                window.history.back();
-            }, 500);
-        }
+       
         function register() {
             document.body.style.transform = "rotateX(180deg)";
             setTimeout(() => {
@@ -125,7 +120,7 @@
         </ul>
         <p>
             <button class="btn" onclick="goToNextPage()">Next Page</button>
-            <button class="btn" onclick="goBack()">Go Back</button>
+            
             <button class="btn" onclick="register()">Register</button>
         </p>
     </div>
