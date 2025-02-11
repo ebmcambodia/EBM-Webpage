@@ -11,6 +11,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             font-family: Arial, sans-serif;
             color: white;
             margin: 0;
@@ -93,12 +94,7 @@
         }
     </style>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let video = document.querySelector(".video-background");
-            video.play().catch(error => {
-                console.log("Autoplay failed. User interaction required.");
-            });
-        });
+        
         
         function goToNextPage() {
             document.body.style.transform = "rotateY(180deg)";
@@ -121,10 +117,7 @@
     </script>
 </head>
 <body>
-    <video class="video-background" autoplay muted loop playsinline>
-        <source src="1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    
     <nav class="navbar">
         <a href="https://ebmcambodia.com/">Home</a>
         <a href="">Services</a>
