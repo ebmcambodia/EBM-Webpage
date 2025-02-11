@@ -92,8 +92,12 @@
             }, 500);
         }
          function goBack() {
-            window.history.back();
-        }
+    if (window.history.length > 1) {
+      window.history.back();
+    } else {
+      alert("No previous page to go back to!");
+    }
+  }
         function register() {
             document.body.style.transform = "rotateX(180deg)";
             setTimeout(() => {
