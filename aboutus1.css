@@ -1,0 +1,137 @@
+/* About Us Section */
+#about-us {
+    padding: 60px 5%;
+    background: rgb(255,165,0);
+    color: white;
+    text-align: center;
+}
+
+#about-us .highlight {
+    color: #001c37;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* About Content */
+.about-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Mission & Vision */
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.mission,
+.vision {
+    flex: 1;
+    background: #001c37;
+    padding: 20px;
+    border-radius: 10px;
+    min-width: 280px;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission h3,
+.vision h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* About Image */
+.about-image {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .mission-vision {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    #about-us {
+        padding: 50px 5%;
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    .about-image img {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    #about-us {
+        padding: 40px 5%;
+    }
+
+    .about-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+    }
+
+    .about-image img {
+        max-width: 300px;
+    }
+
+    .mission,
+    .vision {
+        padding: 15px;
+    }
+}
