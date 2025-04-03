@@ -5,105 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accounting Service</title>
     <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(135deg, #1e3c72, #2a5298);
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: white;
-            margin: 0;
-            transition: transform 0.5s ease-in-out;
-            overflow: hidden;
+            text-align: center;
+            padding: 20px;
         }
-        
-        .navbar a{
-            color : white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: background 0.3s;
-        }
+
+        /* Navigation Bar */
         .navbar {
-            position: absolute;
+            position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0,0,0,0.7);
-            padding:  15px;
+            background: rgba(0, 0, 0, 0.7);
             display: flex;
-            justify-content: space-around;
-            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 15px;
             font-size: 18px;
-
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
-        .navbar a:hover{
-            background: rgb(255, 255, 255,0.3);
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
             border-radius: 5px;
         }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Card Container */
         .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 30px;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            width: 350px;
+            backdrop-filter: blur(15px);
+            width: 90%;
+            max-width: 400px;
             text-align: center;
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
+            transition: transform 0.4s ease;
+            animation: fadeIn 1s ease-in-out;
         }
+
         .card:hover {
-            transform: rotateY(10deg) rotateX(10deg);
+            transform: translateY(-10px);
         }
+
         h1 {
-            font-size: 24px;
+            font-size: 26px;
+            margin-bottom: 15px;
         }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
         ul {
             list-style: none;
             padding: 0;
+            margin-bottom: 15px;
         }
+
         li {
             background: rgba(255, 255, 255, 0.2);
             padding: 10px;
             margin: 5px 0;
             border-radius: 10px;
+            font-size: 14px;
         }
+
+        /* Buttons */
         .btn {
             background: linear-gradient(135deg, #ff7eb3, #ff758c);
             color: white;
-            padding: 12px 25px;
+            padding: 12px 20px;
             border: none;
             border-radius: 10px;
             font-size: 16px;
             cursor: pointer;
+            transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(255, 117, 140, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 2px;
         }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 117, 140, 0.5);
+        }
+
         .btn:active {
             transform: translateY(2px) scale(0.98);
-            box-shadow: 0 3px 10px rgba(255, 117, 140, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+                max-width: 350px;
+                padding: 25px;
+            }
+
+            .navbar {
+                font-size: 16px;
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 18px;
+            }
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
     </style>
+
     <script>
-        
-        
         function goToNextPage() {
-            document.body.style.transform = "rotateY(180deg)";
+            document.body.style.opacity = "0";
             setTimeout(() => {
                 window.location.href = 'RecruitmentService.html';
             }, 500);
         }
-        
-    
-  
+
         function register() {
-            document.body.style.transform = "rotateX(180deg)";
+            document.body.style.opacity = "0";
             setTimeout(() => {
                 window.location.href = 'RegistrationForm.html';
             }, 500);
         }
     </script>
+
 </head>
 <body>
     
@@ -113,24 +174,22 @@
         <a href="https://ebmcambodia.com/about.html">About</a>
         <a href="https://ebmcambodia.com/contact.html">Contact</a>
     </nav>
-    
+
     <div class="card">
         <h1>Accounting Service</h1>
-        <p>our decades of accounting experiences with small and medium enterprises (SME), we definitely well prepare our client day-to-day accounting..</p>
-        <p>Accounting services include:</p>
+        <p>With our decades of accounting experience, we ensure your day-to-day financial operations run smoothly.</p>
+        <p>Our services include:</p>
         <ul>
             <li>Bookkeeping</li>
-            <li>Monthly financial report</li>
-            <li>Annual financial report and submit to Accounting and Auditing Regulator (ACAR)</li>
-            <li>Tax review, planning and advisory</li>
-            <li> And all kinds of documentations with ACAR</li>
-            
+            <li>Monthly financial reports</li>
+            <li>Annual reports (submitted to ACAR)</li>
+            <li>Tax review, planning, and advisory</li>
+            <li>All documentations required by ACAR</li>
         </ul>
         <p>
             <button class="btn" onclick="goToNextPage()">Next Page</button>
-            
-            
         </p>
     </div>
+
 </body>
 </html>
