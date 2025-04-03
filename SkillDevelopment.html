@@ -3,126 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Development</title>
+    <title>Simple Web Page</title>
     <style>
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
             font-family: Arial, sans-serif;
-            color: white;
-            margin: 0;
-            transition: transform 0.5s ease-in-out;
-            overflow: hidden;
-        }
-        
-        .navbar {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            font-size: 18px;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: background 0.3s;
-        }
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-        }
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            width: 350px;
             text-align: center;
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
-        }
-        .card:hover {
-            transform: rotateY(10deg) rotateX(10deg);
+            margin: 50px;
+            background-color: #f4f4f4;
         }
         h1 {
-            font-size: 24px;
+            color: #333;
         }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 10px;
-        }
-        .btn {
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 10px;
+        button {
+            padding: 10px 20px;
             font-size: 16px;
+            margin-top: 20px;
             cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 117, 140, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 2px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
         }
-        .btn:active {
-            transform: translateY(2px) scale(0.98);
-            box-shadow: 0 3px 10px rgba(255, 117, 140, 0.5);
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
-    <script>
-        function goToNextPage() {
-            document.body.style.transform = "rotateY(180deg)";
-            setTimeout(() => {
-                window.location.href = 'Callcenter.html';
-            }, 500);
-        }
-       
-        function register() {
-            document.body.style.transform = "rotateX(180deg)";
-            setTimeout(() => {
-                window.location.href = 'RegistrationForm.html';
-            }, 500);
-        }
-    </script>
 </head>
 <body>
-    
-    <nav class="navbar">
-        <a href="https://ebmcambodia.com/">Home</a>
-        <a href="">Services</a>
-        <a href="https://ebmcambodia.com/about.html">About</a>
-        <a href="https://ebmcambodia.com/contact.html">Contact</a>
-    </nav>
-    <div class="card">
-        <h1>Skill Development</h1>
-        <p>We tailor the classes to a specific need and level. We develop course content which is continually updated by experience gained from client feedback.  </p>
-        <p>Our skill training and development includes:</p>
-        <ul>
-            <li>  Career training and development</li>
-            <li>Language training (Khmer language for foreigners)</li>
-            
-            
-            
-        </ul>
-        <p>
-            <button class="btn" onclick="goToNextPage()">Next Page</button>
-            
-            
-        </p>
-    </div>
+
+    <h1>Welcome to My Simple Page</h1>
+    <p>Click the button below to change the background color.</p>
+    <button onclick="changeColor()">Change Background</button>
+
+    <script>
+        function changeColor() {
+            const colors = ["#ff6b6b", "#6bff8c", "#6bcaff", "#f9ff6b", "#d76bff"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+
 </body>
 </html>
