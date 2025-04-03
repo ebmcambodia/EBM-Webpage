@@ -146,3 +146,151 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill Development</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            font-family: Arial, sans-serif;
+            color: white;
+            transition: transform 0.6s ease-in-out;
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 18px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Card Container */
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+            transform: perspective(1000px) rotateY(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .card:hover {
+            transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
+        }
+
+        /* List Styles */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+
+        li {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Button Styles */
+        .btn {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 117, 140, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+            box-shadow: 0 3px 10px rgba(255, 117, 140, 0.5);
+        }
+    </style>
+
+    <script>
+        function goToNextPage() {
+            document.body.style.transform = "rotateY(180deg)";
+            setTimeout(() => {
+                window.location.href = 'Callcenter.html';
+            }, 600);
+        }
+    </script>
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="https://ebmcambodia.com/">Home</a>
+        <a href="#">Services</a>
+        <a href="https://ebmcambodia.com/about.html">About</a>
+        <a href="https://ebmcambodia.com/contact.html">Contact</a>
+    </nav>
+
+    <!-- Content Card -->
+    <div class="card">
+        <h1>Skill Development</h1>
+        <p>We tailor classes to meet specific needs and skill levels. Our course content is updated based on client feedback to ensure high-quality learning experiences.</p>
+        <p>Our skill training and development include:</p>
+
+        <ul>
+            <li>Career training and development</li>
+            <li>Language training (Khmer language for foreigners)</li>
+        </ul>
+
+        <button class="btn" onclick="goToNextPage()">Next Page</button>
+    </div>
+
+</body>
+</html>
