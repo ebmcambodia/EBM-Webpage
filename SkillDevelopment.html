@@ -1,296 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <title>E B M CO.,LTD</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/Logo.jpg"> <!-- Corrected type to image/x-icon -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Development</title>
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            font-family: Arial, sans-serif;
-            color: white;
-            transition: transform 0.6s ease-in-out;
-            overflow: hidden;
-            text-align: center;
-            padding: 20px;
-        }
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico">
 
-        /* Navigation Bar */
-        .navbar {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            font-size: 18px;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: all 0.3s ease;
-            border-radius: 5px;
-        }
-
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Card Container */
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            max-width: 400px;
-            transform: perspective(1000px) rotateY(0);
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .card:hover {
-            transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
-        }
-
-        /* List Styles */
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0;
-        }
-
-        li {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px;
-            margin: 5px 0;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        li:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Button Styles */
-        .btn {
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 117, 140, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-top: 15px;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-        }
-
-        .btn:active {
-            transform: scale(0.98);
-            box-shadow: 0 3px 10px rgba(255, 117, 140, 0.5);
-        }
-    </style>
-
-    <script>
-        function goToNextPage() {
-            document.body.style.transform = "rotateY(180deg)";
-            setTimeout(() => {
-                window.location.href = 'Callcenter.html';
-            }, 600);
-        }
-    </script>
-</head>
-<body>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
     
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="https://ebmcambodia.com/">Home</a>
-        <a href="#">Services</a>
-        <a href="https://ebmcambodia.com/about.html">About</a>
-        <a href="https://ebmcambodia.com/contact.html">Contact</a>
-    </nav>
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Content Card -->
-    <div class="card">
-        <h1>Skill Development</h1>
-        <p>We tailor classes to meet specific needs and skill levels. Our course content is updated based on client feedback to ensure high-quality learning experiences.</p>
-        <p>Our skill training and development include:</p>
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-        <ul>
-            <li>Career training and development</li>
-            <li>Language training (Khmer language for foreigners)</li>
-        </ul>
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        <button class="btn" onclick="goToNextPage()">Next Page</button>
-    </div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill Development</title>
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            font-family: Arial, sans-serif;
-            color: white;
-            transition: transform 0.6s ease-in-out;
-            overflow: hidden;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 15px;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            font-size: 18px;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 15px;
-            transition: all 0.3s ease;
-            border-radius: 5px;
-        }
-
-        .navbar a:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Card Container */
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            max-width: 400px;
-            transform: perspective(1000px) rotateY(0);
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .card:hover {
-            transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
-        }
-
-        /* List Styles */
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0;
-        }
-
-        li {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 12px;
-            margin: 5px 0;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        li:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        /* Button Styles */
-        .btn {
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(255, 117, 140, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-top: 15px;
-        }
-
-        .btn:hover {
-            transform: scale(1.05);
-        }
-
-        .btn:active {
-            transform: scale(0.98);
-            box-shadow: 0 3px 10px rgba(255, 117, 140, 0.5);
-        }
-    </style>
-
-    <script>
-        function goToNextPage() {
-            document.body.style.transform = "rotateY(180deg)";
-            setTimeout(() => {
-                window.location.href = 'Callcenter.html';
-            }, 600);
-        }
-    </script>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <a href="https://ebmcambodia.com/">Home</a>
-        <a href="#">Services</a>
-        <a href="https://ebmcambodia.com/about.html">About</a>
-        <a href="https://ebmcambodia.com/contact.html">Contact</a>
-    </nav>
 
-    <!-- Content Card -->
-    <div class="card">
-        <h1>Skill Development</h1>
-        <p>We tailor classes to meet specific needs and skill levels. Our course content is updated based on client feedback to ensure high-quality learning experiences.</p>
-        <p>Our skill training and development include:</p>
+<body oncontextmenu="return false">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
 
-        <ul>
-            <li>Career training and development</li>
-            <li>Language training (Khmer language for foreigners)</li>
-        </ul>
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <span style="color: rgba(255, 108, 23, 0.808); font-size: 32px;">E B M CO.,LTD</span>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="http://recruitment.ebmcambodia.com/" class="nav-item nav-link">Recruitment</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Service</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            
+                            <a href="TaxationService.html" class="dropdown-item">Taxation Service</a>
+                            <a href="AccountingService.html" class="dropdown-item">Accounting Service</a>
+                            <a href="RecruitmentService.html" class="dropdown-item">Recruitment Service</a>
+                            <a href="PayrollService.html" class="dropdown-item">Payroll Service</a>
+                            <a href="HROutsourcing.html" class="dropdown-item">HR Outsourcing</a>
+                            <a href="StatutoryComplianceService.html" class="dropdown-item">Statutory Compliance Service</a>
+                            <a href="SkillDevelopment.html" class="dropdown-item">Skill Development</a>
+                            <a href="Callcenter.html" class="dropdown-item">Call Center</a>
+                            
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="job-list.html" class="dropdown-item">Job List</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="pageReview.html" class="nav-item nav-link">Review</a>
+                </div>
+                <a href="https://t.me/ebmcambodia" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">ChatNOW</a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
 
-        <button class="btn" onclick="goToNextPage()">Next Page</button>
-    </div>
+        <section class="home">
+            <div class="content animate-on-scroll">
+              <h1>Our Service.<br><span>SkillDevelopment</span></h1>
+              <p>We tailor classes to meet specific needs and skill levels. Our course content is updated based on client feedback to ensure high-quality learning experiences.</p>
+              <p>Our skill training and development include:</p>
+              <p>Career training and development</p>
+              <p>Language training (Khmer language for foreigners)</p>
+              
+              <a href="#" class="btn pulse">Read More</a>
+             
+              <p>
+                <div>
+                    <a href="StatutoryComplianceService.html" class="btn">Go Back</a>
+                    <a href="Callcenter.html" class="btn pulse">Next Page</a>
+                </div>
+              </p>
+              
+            </div>
+          
+            <!-- 👇 Animated Image Container with ID -->
+            <div class="image-box animate-on-scroll" id="animated-image">
+              <img src="Images/3Dskill-removebg-preview.png" alt="Accounting Illustration" class="animated-img">
+            </div>
+          
+            <div class="media-icons animate-on-scroll">
+              <a href="#"><i class="fab fa-facebook-f bounce"></i></a>
+              <a href="#"><i class="fab fa-instagram bounce"></i></a>
+              <a href="#"><i class="fab fa-twitter bounce"></i></a>
+            </div>
+          </section>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const animatedElements = document.querySelectorAll('.animate-on-scroll');
+          
+              function animateOnScroll() {
+                const triggerBottom = window.innerHeight * 0.85;
+          
+                animatedElements.forEach(el => {
+                  const elementTop = el.getBoundingClientRect().top;
+          
+                  if (elementTop < triggerBottom) {
+                    el.classList.add('show');
+                  }
+                });
+              }
+          
+              window.addEventListener('scroll', animateOnScroll);
+              animateOnScroll(); // Run on load
+            });
+          </script>
+          
 
+          <!-- <section id="about">
+            <div class="content">
+              <h1>About Us</h1>
+              <p>This is the about page content. More info about your service can go here.</p>
+              <a href="#home" class="btn">Back to Home</a>
+            </div>
+          </section> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
