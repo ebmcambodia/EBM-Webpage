@@ -633,3 +633,192 @@ padding-right: 2rem;
 .gallery .box-container .box .icons a:hover{
     color:var(--main-color);
 }
+section{
+    padding: 100px 200px;
+}
+
+head .brand{
+    color:#000;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation{
+    position: relative;
+}
+
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10%;
+    position: relative;
+    background: #fff;
+    min-height: 100vh;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.home .content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .home h1 span {
+    color: #3498db;
+  }
+  
+  .home p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .home .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+  
+  .home .btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .media-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .media-icons a {
+    color: #3498db;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .media-icons a:hover {
+    color: #2980b9;
+  }
+  
+  /* 📱 Mobile styles */
+  @media (max-width: 768px) {
+    .home {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 30px 20px;
+    }
+  
+    .media-icons {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  
+    .home h1 {
+      font-size: 2rem;
+    }
+  
+    .home p {
+      font-size: 0.95rem;
+    }
+  
+    .media-icons a {
+      font-size: 1.25rem;
+      margin: 0 10px;
+    }
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .image-box img.animated-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  /* Media icons */
+  .media-icons {
+    position:relative;
+    bottom: 20px;
+    left: 10%;
+  }
+  
+  .media-icons a {
+    margin-right: 15px;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .home {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .content,
+    .image-box {
+      max-width: 100%;
+    }
+  
+    .image-box {
+      margin-top: 30px;
+    }
+  }
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+  }
+  .animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Image floating animation */
+  .animated-img {
+    width: 100%;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+  }
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* Button hover effect */
+  .pulse {
+    transition: all 0.3s ease;
+  }
+  .pulse:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+  }
+  
+  /* Social icons hover bounce */
+  .bounce {
+    transition: transform 0.3s ease;
+  }
+  .bounce:hover {
+    transform: translateY(-6px);
+  }
