@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Under Maintenance</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+    }
+
+    .illustration {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 2rem;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #cbd5e1;
+      margin-bottom: 2rem;
+    }
+
+    .back-button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      background-color: #facc15;
+      color: #1e293b;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #eab308;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="illustration">
+      <!-- Replace this with your exported SVG from Adobe Illustrator -->
+      <img src="/Images/Under Maintenance.webp" alt="Under Maintenance Illustration" style="width: 100%;" />
+    </div>
+    <h1>Under Maintenance</h1>
+    <p>We're currently working on some improvements.<br>Please check back soon!</p>
+    <button class="back-button" onclick="goBack()">Go Back</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+    console.log("Maintenance mode active.");
+  </script>
+</body>
+</html>
