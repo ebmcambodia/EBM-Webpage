@@ -40,6 +40,72 @@
             </div>
         </div>
         <!-- Spinner End -->
+         <!-- Top Bar Start -->
+        <div class="top-bar bg-dark text-light py-2 px-3">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <!-- Left: Phone & Time -->
+                    <div class="d-flex align-items-center flex-shrink-0 me-3 mb-2">
+                        <small class="me-3 mb-0">
+                            <i class="fas fa-phone-alt text-warning me-1"></i>
+                            (+855) 10-888-310
+                        </small>
+                        <small class="mb-0">
+                            <i class="fas fa-clock text-warning me-1"></i>
+                            <span id="current-time">08:00 - 17:00</span>
+                        </small>
+                    </div>
+        
+                    <!-- Center: Login & Language -->
+                    <div class="d-flex align-items-center flex-shrink-0 mb-2">
+                        <a href="login.html" class="text-light text-decoration-none d-flex align-items-center me-3">
+                            <i class="fas fa-lock text-warning me-1"></i>
+                            <small>Login</small>
+                        </a>
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Language
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                                <li><a class="dropdown-item" href="?lang=en">🇬🇧 English</a></li>
+                                <li><a class="dropdown-item" href="?lang=km">🇰🇭 Khmer</a></li>
+                                <li><a class="dropdown-item" href="?lang=zh">🇨🇳 中文</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Right: Social Media Icons -->
+                    <div class="d-flex align-items-center flex-shrink-0 gap-3 mb-2">
+                        <a href="https://facebook.com" class="text-light"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" class="text-light"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                document.getElementById("current-time").textContent = `${hours}:${minutes}`;
+            }
+            updateClock();
+            setInterval(updateClock, 60000); // Update every minute
+        </script>
+        
+  
+  <style>
+    .dropdown-menu {
+    z-index: 1055; /* higher than typical navbar or modal z-indexes */
+  }
+  
+  .top-bar {
+    position: relative;
+    z-index: 1050; /* ensure the top-bar stays above background elements */
+  }
+    </style>
 
 
         <!-- Navbar Start -->
@@ -52,11 +118,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="#" class="nav-item nav-link">Resources</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Our Service</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Service</a>
                         <div class="dropdown-menu rounded-0 m-0">
+                            <a href="#" class="dropdown-item">Category</a>
                             <a href="TaxationService.html" class="dropdown-item">Taxation Service</a>
                             <a href="AccountingService.html" class="dropdown-item">Accounting Service</a>
                             <a href="RecruitmentService.html" class="dropdown-item">Recruitment Service</a>
@@ -65,22 +133,50 @@
                             <a href="StatutoryComplianceService.html" class="dropdown-item">Statutory Compliance Service</a>
                             <a href="SkillDevelopment.html" class="dropdown-item">Skill Development</a>
                             <a href="Callcenter.html" class="dropdown-item">Call Center</a>
+                            
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown active">Jobs</a>
                         <div class="dropdown-menu rounded-0 m-0">
-                            <a href="job-list.html" class="dropdown-item">Job List</a>
-                            
-                           
+                            <a href="job-list.html" class="dropdown-item active">Job List</a>
+                            <a href="http://recruitment.ebmcambodia.com/" class="dropdown-item">Recruitment</a>
+                            <a href="https://recruitment.ebmcambodia.com/index.php?q=hiring" class="dropdown-item">Carrer</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <div class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>News</span>
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-newspaper"></i></button>
+                            </div>
+                            <div class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>Accounting Software</span>
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-laptop-code"></i></button>
+                            </div>
+                            <div class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>Events</span>
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-calendar-alt"></i></button>
+                            </div>
+                            
+                            <div class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>AI EBM</span>
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-robot"></i></button>
+                            </div>
+                            <div class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>Mobile App</span>
+                                <button class="btn btn-sm btn-outline-primary"><i class="fas fa-mobile-alt"></i></button>
+                            </div>
+                        </div>
+                    </div>  
                 </div>
-                <a href="https://t.me/ebmcambodia" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Login<i class="fa fa-arrow-right ms-3"></i></a>
+                <a href="/Maintenance/UnderMaintenace.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Resigter</a>
             </div>
         </nav>
         <!-- Navbar End -->
+         
 
 
         <!-- Header End -->
@@ -194,24 +290,23 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h5 class="text-white mb-4">Company</h5>
-                        <a class="btn btn-link text-white-50" href="https://www.linkedin.com/company/ebm-co-ltd-/?originalSubdomain=kh">About Us</a>
-                        <a class="btn btn-link text-white-50" href="https://kh33266.contact.page/">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="https://t.me/Vitu_Phang">Our Services</a>
-                        
+                        <a class="btn btn-link text-white-50" href="https://ebmcambodia.com/about.html">About Us</a>
+                        <a class="btn btn-link text-white-50" href="https://ebmcambodia.com/contact.html">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="https://ebmcambodia.com/TaxationService.html">Our Services</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Job</h5>
-                        <a class="btn btn-link text-white-50" href="job-list.html">Job-list</a>
-                        <a class="btn btn-link text-white-50" href="job-detail.html">Job-detail</a>
-                        <a class="btn btn-link text-white-50" href="https://t.me/Vitu_Phang">Our Services</a>
+                        <h5 class="text-white mb-4">Jobs</h5>
+                        <a class="btn btn-link text-white-50" href="http://recruitment.ebmcambodia.com/index.php?q=hiring">Job List</a>
+                        <a class="btn btn-link text-white-50" href="http://recruitment.ebmcambodia.com/index.php">Job Detail</a>
+                        <a class="btn btn-link text-white-50" href="https://ebmcambodia.com/TaxationService.html">Our Services</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h5 class="text-white mb-4">Contact</h5>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No. 151, St. 376 Phnom Penh Phnom Penh</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+85510888310</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>No. 151, St. 376 Phnom Penh, 12302</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+855 23 213 919</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>hr@ebmcambodia.com</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/ebm.coltd/?locale=km_KH"><i class="fab fa-facebook-f"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/@ebmcambodia/featured"><i class="fab fa-youtube"></i></a>
                             <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/ebm-co-ltd-/?originalSubdomain=kh"><i class="fab fa-linkedin-in"></i></a>
@@ -221,8 +316,8 @@
                         <h5 class="text-white mb-4">Newsletter</h5>
                         <p>Subscribe to our newsletter for the latest updates, expert insights, and exclusive tips delivered right to your inbox.</p>
                         <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">ChatUs</button>
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" placeholder="Your email" required>
+                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Chat Us</button>
                         </div>
                     </div>
                 </div>
@@ -231,17 +326,15 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">EBM Cambodia</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="">Code By Phin Sopanha</a>
+                            &copy; <a class="border-bottom" href="#">EBM Co.,Ltd.</a>, All Rights Reserved. 
+                            Designed By <a class="border-bottom" href="#">Staff</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
+                                <a href="#">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FAQs</a>
                             </div>
                         </div>
                     </div>

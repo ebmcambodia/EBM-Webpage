@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Fetch API Example</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #articles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .article {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-content h2 {
+            font-size: 20px;
+            margin: 0 0 10px;
+        }
+
+        .article-content p {
+            flex: 1;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .article-content a {
+            margin-top: 10px;
+            text-decoration: none;
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .article-content a:hover {
+            background: #0056b3;
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 24px;
+            color: #007bff;
+            margin-top: 50px;
+        }
+
+        .error {
+            text-align: center;
+            font-size: 24px;
+            color: red;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Latest News</h1>
+        <p>Powered by NewsAPI.org</p>
+    </header>
+
+    <div id="articles" class="loading">Loading articles...</div>
+
+    <script>
+        const apiKey = '99de04c5fa344bc991559c8ef0ea3125';
+        const apiUrl = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=';
+
+        fetchApi();
+
+        async function fetchApi() {
+            try {
+                const response = await fetch(`${apiUrl}${apiKey}`);
+                if (response.status == 200) {
+                    const data = await response.json();
+                    console.log(data);
+
+                    if (data.articles.length === 0) {
+                        document.getElementById('articles').innerHTML = "<div class='error'>No articles found.</div>";
+                        return;
+                    }
+
+                    document.getElementById('articles').innerHTML = data.articles.map(article => `
+                        <div class="article">
+                            <img src="${article.urlToImage || 'https://via.placeholder.com/300x200'}" alt="Article Image">
+                            <div class="article-content">
+                                <h2>${article.title || 'No Title'}</h2>
+                                <p>${article.description || 'No description available.'}</p>
+                                <a href="${article.url}" target="_blank">Read more</a>
+                            </div>
+                        </div>
+                    `).join('');
+                } else {
+                    document.getElementById('articles').innerHTML = `<div class="error">Failed to fetch articles. Status: ${response.status}</div>`;
+                }
+            } catch (error) {
+                console.error('Fetching error:', error);
+                document.getElementById('articles').innerHTML = "<div class='error'>Error fetching articles!</div>";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
+<!-- api from ebmcambodia069@gmail.com by newAPI  -->

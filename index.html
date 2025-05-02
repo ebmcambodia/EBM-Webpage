@@ -32,6 +32,19 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="shortcut icon" href="img/">
+
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Top Bar Start -->
+
+
+
 </head>
 
 <body oncontextmenu="return false">
@@ -46,6 +59,78 @@
         <!-- Spinner End -->
 
 
+        <!-- Top Bar Start -->
+        <div class="top-bar bg-dark text-light py-2 px-3">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <!-- Left: Phone & Time -->
+                    <div class="d-flex align-items-center flex-shrink-0 me-3 mb-2">
+                        <small class="me-3 mb-0">
+                            <i class="fas fa-phone-alt text-warning me-1"></i>
+                            (+855) 10-888-310
+                        </small>
+                        <small class="mb-0">
+                            <i class="fas fa-clock text-warning me-1"></i>
+                            <span id="current-time">08:00 - 17:00</span>
+                        </small>
+                    </div>
+        
+                    <!-- Center: Login & Language -->
+                    <div class="d-flex align-items-center flex-shrink-0 mb-2">
+                        <a href="/Maintenance/UnderMaintenace.html" class="text-light text-decoration-none d-flex align-items-center me-3">
+                            <i class="fas fa-lock text-warning me-1"></i>
+                            <small>Login</small>
+                        </a>
+                        <div class="dropdown nav-item nav-link disabled">
+                            <button class="btn btn-sm btn-outline-light dropdown-toggle " type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Language
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                                <li><a class="dropdown-item" href="?lang=en">🇬🇧 English</a></li>
+                                <li><a class="dropdown-item" href="?lang=km">🇰🇭 Khmer</a></li>
+                                <li><a class="dropdown-item" href="?lang=zh">🇨🇳 中文</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Right: Social Media Icons -->
+                    <div class="d-flex align-items-center flex-shrink-0 gap-3 mb-2">
+                        <a href="https://www.facebook.com/ebm.coltd" class="text-light"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://kh.linkedin.com/company/ebm-co-ltd-" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function updateClock() {
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                document.getElementById("current-time").textContent = `${hours}:${minutes}`;
+            }
+            updateClock();
+            setInterval(updateClock, 60000); // Update every minute
+        </script>
+        
+
+<style>
+    .dropdown-menu {
+    z-index: 1055; /* higher than typical navbar or modal z-indexes */
+}
+
+.top-bar {
+    position: relative;
+    z-index: 1050; /* ensure the top-bar stays above background elements */
+}
+    </style>
+
+    
+    
+<!-- Top Bar End -->
+
+
 <!-- Main navbar -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
     <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
@@ -58,10 +143,20 @@
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="http://recruitment.ebmcambodia.com/" class="nav-item nav-link">Recruitment</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Recourse</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">Invoice Generate</a>
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">Free Software</a>
+                           
+                        </div>
+                    </div>
+
+                    
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Service</a>
                         <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">Category</a>
                             <a href="TaxationService.html" class="dropdown-item">Taxation Service</a>
                             <a href="AccountingService.html" class="dropdown-item">Accounting Service</a>
                             <a href="RecruitmentService.html" class="dropdown-item">Recruitment Service</a>
@@ -76,47 +171,122 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
                         <div class="dropdown-menu rounded-0 m-0">
                             <a href="job-list.html" class="dropdown-item">Job List</a>
+                            <a href="http://recruitment.ebmcambodia.com/" class="dropdown-item">Recruitment</a>
+                            <a href="https://recruitment.ebmcambodia.com/index.php?q=hiring" class="dropdown-item">Carrer</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    <a href="#" class="nav-item nav-link disabled" title="This page is currently under maintenance." aria-disabled="true">Other</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <div class="dropdown-item d-flex justify-content-between align-items-center">
+                                   
+                            </div>
+                            <a href="/newspage/newspage.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>News</span>
+                                <i class="fas fa-newspaper text-primary"></i>
+                            </a>   
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>Software</span>
+                                <i class="fas fa-laptop-code text-primary"></i>
+                            </a>
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>Events</span>
+                                <i class="fas fa-calendar-alt text-primary"></i>
+                            </a>
+                            
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>AI EBM</span>
+                                <i class="fas fa-robot text-primary"></i>
+                            </a>
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>Mobile App</span>
+                                <i class="fas fa-mobile-alt text-primary"></i>
+                            </a>
+                        </div>
+                    </div>  
                 </div>
-                <a href="/Maintenance/UnderMaintenace.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Login</a>
+                <a href="/Maintenance/UnderMaintenace.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Resigter</a>
             </div>
         </nav>
         <!-- Navbar End -->
 
+        <style>
+            .carousel-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+                padding: 2rem;
+                z-index: 2;
+            }
+            </style>
+
         <!-- Carousel Start -->
         <div class="container-fluid p-0">
             <div class="owl-carousel header-carousel position-relative">
+                
+                <!-- Slide 1 -->
                 <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="img/carousel-1.jpg" alt="EBM One - Stop Service for Investors">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5);">
+                    <img class="img-fluid w-100" src="img/carousel-1.jpg" alt="EBM One - Stop Service for Investors">
+                    <div class="carousel-overlay d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-start">
-                                <div class="col-10 col-lg-8">
-                                    <h1 class="display-3 text-white animated slideInDown mb-4">EBM One - Stop Service for Investors</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">We make your business GO...While you make it Growth Your Benefits, Our Achievement.</p>
+                                <div class="col-lg-8 col-md-10">
+                                    <h1 class="display-3 text-white fw-bold mb-3 animate__animated animate__fadeInDown">
+                                        EBM One - Stop Service for Investors
+                                    </h1>
+                                    <p class="lead text-white mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                                        We make your business GO... While you make it grow.<br>Your Benefits, Our Achievement.
+                                    </p>
+                                    <a href="/Maintenance/UnderMaintenace.html" class="btn btn-primary px-4 py-2 me-2 animate__animated animate__fadeInLeft animate__delay-2s">Our Services</a>
+                                    <a href="/contact.html" class="btn btn-outline-light px-4 py-2 animate__animated animate__fadeInRight animate__delay-2s">Contact Us</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+        
+                <!-- Slide 2 -->
                 <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="img/carousel-2.jpg" alt="EBM is Your Business Trust Partner">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(43, 57, 64, .5);">
+                    <img class="img-fluid w-100" src="img/carousel-2.jpg" alt="EBM is Your Business Trust Partner">
+                    <div class="carousel-overlay d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-start">
-                                <div class="col-10 col-lg-8">
-                                    <h1 class="display-3 text-white animated slideInDown mb-4">EBM is Your Business Trust Partner</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">Your benefit is our achievement.</p>
+                                <div class="col-lg-8 col-md-10">
+                                    <h1 class="display-3 text-white fw-bold mb-3 animate__animated animate__fadeInDown">
+                                        EBM is Your Business Trust Partner
+                                    </h1>
+                                    <p class="lead text-white mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                                        Your benefit is our achievement. Let us support your business journey.
+                                    </p>
+                                    <a href="/about.html" class="btn btn-primary px-4 py-2 me-2 animate__animated animate__fadeInLeft animate__delay-2s">Learn More</a>
+                                    <a href="/contact.html" class="btn btn-outline-light px-4 py-2 animate__animated animate__fadeInRight animate__delay-2s">Get in Touch</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+        
             </div>
         </div>
+        <script>
+        $(document).ready(function(){
+            $(".header-carousel").owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                smartSpeed: 1000,
+                animateOut: 'fadeOut',
+                animateIn: 'fadeIn',
+                nav: false,
+                dots: true
+            });
+        });
+        </script>
         <!-- Carousel End -->
 
         <!-- Category Start -->
@@ -173,9 +343,232 @@
                         </a>
                     </div>
                 </div>
+                <div class="container-xxl py-5">
+                    <div class="container">
+                      <h1 class="text-center mb-4">Category</h1>
+                  
+                      <!-- Search and Category Filter -->
+                      <div class="row mb-5 justify-content-center">
+                        <div class="col-md-4 mb-2">
+                          <input type="text" id="searchInput" class="form-control" placeholder="Search by name...">
+                        </div>
+                        <div class="col-md-3 mb-2">
+                          <select id="categoryFilter" class="form-select">
+                            <option value="all">All Categories</option>
+                            <option value="tax">Tax Services</option>
+                            <option value="accounting">Accounting</option>
+                            <option value="hr">HR Services</option>
+                            <option value="Re">RecruitmentService</option>
+                            <option value="company">Company Services</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!-- Service Cards -->
+    <div class="row g-4" id="servicesContainer">
+
+        <!-- Sample Card -->
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="tax" data-title="Annual Tax Declaration">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="img/Logo.jpg" class="card-img-top" alt="Annual Tax">
+              <div class="card-body text-center">
+                <i class="fa fa-file-invoice-dollar fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Monthly Tax Declaration</h5>
+                <p class="card-text small">Timely and compliant tax filing.</p>
+                <a href="AccountingService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="tax" data-title="Annual Tax Declaration">
+            <div class="card h-100 shadow-sm border-0">
+              <img src="img/Logo.jpg" class="card-img-top" alt="Annual Tax">
+              <div class="card-body text-center">
+                <i class="fa fa-file-invoice-dollar fa-3x text-primary mb-3"></i>
+                <h5 class="card-title">Annual Tax Declaration</h5>
+                <p class="card-text small">Timely and compliant tax filing.</p>
+                <a href="AccountingService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+                <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+              </div>
+            </div>
+          </div>
+          
+  
+  
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp " data-wow-delay="0.2s" data-category="accounting" data-title="Accounting Report">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="Accounting Report">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-chart-line text-primary mb-3"></i>
+              <h5 class="card-title">Accounting Report</h5>
+              <p class="card-text small">Accurate financial documentation.</p>
+              <a href="AccountingService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp " data-wow-delay="0.2s" data-category="Tax" data-title="Bookkeeping">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">Bookkeeping</h5>
+              <p class="card-text small">Accurate and organized financial recordkeeping services.</p>
+              <a href="AccountingService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="hr" data-title="HR Unit Outsourcing">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">HR Unit Outsourcing</h5>
+              <p class="card-text small">Efficient HR management support.</p>
+              <a href="HROutsourcing.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="hr" data-title="Permanent and Temporary Employee">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">Permanent and Temporary Employee</h5>
+              <p class="card-text small">A permanent employee typically has an ongoing, indefinite employment contract with an employer.</p>
+              <a href="HROutsourcing.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="hr" data-title="Payroll and Benefits Administration">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">Payroll and Benefits Administration</h5>
+              <p class="card-text small">The Payroll and Benefits Administrator (PBA) is responsible for the day-to-day operations of payroll and benefits needs.</p>
+              <a href="PayrollService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="hr" data-title="New Company Registration">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">New Company Registration</h5>
+              <p class="card-text small">Company Registration Application" or "Application for Incorporation</p>
+              <a href="StatutoryComplianceService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="hr" data-title="Renew license">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">Renew license</h5>
+              <p class="card-text small"></p>
+              <a href="StatutoryComplianceService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="hr" data-title="Closing Company">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">Closing Company</h5>
+              <p class="card-text small"></p>
+              <a href="StatutoryComplianceService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="hr" data-title="Local & Expatrate Work Permit">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">Local & Expatrate Work Permit</h5>
+              <p class="card-text small">Work Permit and Employment Card.</p>
+              <a href="StatutoryComplianceService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-3 col-sm-6 service-card wow fadeInUp" data-wow-delay="0.2s" data-category="Re" data-title="RecruitmentService">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/Logo.jpg" class="card-img-top" alt="HR Services">
+            <div class="card-body text-center">
+              <i class="fa fa-3x fa-hands-helping text-primary mb-3"></i>
+              <h5 class="card-title">RecruitmentService</h5>
+              <p class="card-text small"></p>
+              <a href="RecruitmentService.html" class="btn btn-outline-primary btn-sm">Learn More</a>
+              <a href="Maintenance/UnderMaintenace.html" class="btn btn-primary btn-sm">Enroll</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add more cards as needed -->
+  
+      </div>
+    </div>
+  </div>
+  
+  <!-- JavaScript: Search & Filter -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const serviceCards = document.querySelectorAll('.service-card');
+  
+    function filterServices() {
+      const search = searchInput.value.toLowerCase();
+      const category = categoryFilter.value;
+  
+      serviceCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        const cardCategory = card.getAttribute('data-category');
+  
+        const matchesCategory = (category === 'all' || cardCategory === category);
+        const matchesSearch = title.includes(search);
+  
+        card.style.display = (matchesCategory && matchesSearch) ? 'block' : 'none';
+      });
+    }
+  
+    searchInput.addEventListener('input', filterServices);
+    categoryFilter.addEventListener('change', filterServices);
+  </script>
+                  
+
             </div>
         </div>
         <!-- Category End -->
+        <style>
+            .card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Optional: adjust height for smaller screens */
+@media (max-width: 576px) {
+  .card-img-top {
+    height: 120px;
+  }
+}
+          </style>
+
+      
+          
 
         <!-- About Start -->
         <div class="container-xxl py-5">
@@ -553,6 +946,64 @@
     </div>
         <!-- Jobs End -->
 
+        <!-- News Section Start -->
+<div class="container my-5">
+    <h3 class="mb-4" data-aos="fade-up">Latest News</h3>
+    <div class="row g-4">
+  
+      <!-- News Item 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card h-100 shadow-sm">
+          <img src="images/GDT.jpg" class="card-img-top-1" alt="News Image 1" >
+          <div class="card-body">
+            <h5 class="card-title">អគ្គនាយកដ្ឋានពន្ធដារ General Department of Taxation</h5>
+            <p class="card-text">សេចក្ដីបំភ្លឺ</p>
+            <a href="https://www.tax.gov.kh/en/categories/qvJQE254193040349" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- News Item 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card h-100 shadow-sm">
+          <img src="images/mlvt.jpg" class="card-img-top-1" alt="News Image 2">
+          <div class="card-body">
+            <h5 class="card-title">ក្រសួង​ការងារ និង​បណ្ដុះបណ្ដាលវិជ្ជាជីវៈ</h5>
+            <p class="card-text">សេចក្តីប្រកាសព័ត៌មាន ស្តីពី ការប្រារព្ធខួបអនុស្សាវរីយ៍លើកទី១៣៩ នៃទិវាពលកម្មអន្តរជាតិ ១ ឧសភា ឆ្នាំ២០២៥</p>
+            <a href="news-detail.html" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- News Item 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card h-100 shadow-sm">
+          <img src="images/mov.jpg" class="card-img-top-1" alt="News Image 3">
+          <div class="card-body">
+            <h5 class="card-title">ក្រសួងពាណិជ្ជកម្ម</h5>
+            <p class="card-text">សេចក្តីជូនដំណឹង ស្តីពី ការដាក់ឱ្យអនុវត្តនូវវិធានការ សម្រាប់ការនាំចេញទំនិញមួយចំនួនទៅកាន់ទីផ្សារសហរដ្ឋអាម៉េរិក</p>
+            <a href="https://www.moc.gov.kh/news" class="btn btn-sm btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <style>
+    .card-img-top-1 {
+  height: 570   px; /* or whatever height you prefer */
+  object-fit: cover;
+}
+  </style>
+  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  <!-- News Section End -->
+
         <!-- Our Partners Start -->
         <div class="container-xxl py-5">
             <div class="container">
@@ -623,6 +1074,164 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
+            <section id="team">
+                <h1 class="heading">
+                    <i class="fa-solid fa-rocket"></i>Team Members
+                </h1>
+        
+                <div class="container1">
+                    <!-- Team Member Card -->
+                    <div class="box">
+                        <div class="top-bar-team"></div>
+                        <div class="nav">
+                            <i class="verify fas fa-check-circle"></i>
+                            <input class="heart-btn" type="checkbox" id="heart-btn-1">
+                            <label class="heart" for="heart-btn-1"></label>
+                        </div>
+                        <div class="details">
+                            <img src="" alt="">
+                        </div>
+                        <strong>Sok Sandy</strong>
+                        <p>sandy@ebmcambodia.com</p>
+                        <div class="btn">
+                            <a href="#"><i class="fas fa-clipboard-list"></i>CEO</a>
+                            <a href="#"><i class="fas fa-eye"></i>View</a>
+                        </div>
+                    </div>
+        
+                    <!-- Repeat for other members -->
+                    <div class="box">
+                        <div class="top-bar-team"></div>
+                        <div class="nav">
+                            <i class="verify fas fa-check-circle"></i>
+                            <input class="heart-btn" type="checkbox" id="heart-btn-2">
+                            <label class="heart" for="heart-btn-2"></label>
+                        </div>
+                        <div class="details">
+                            <img src="/Images/vitus.jpg" alt="">
+                        </div>
+                        <strong>Vitu Phang</strong>
+                        <p>recruitment@ebmcambodia.com</p>
+                        <div class="btn">
+                            <a href="#"><i class="fas fa-clipboard-list"></i>HR,Compliance,Recruitment</a>
+                            <a href="#"><i class="fas fa-eye"></i>View</a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other members -->
+                    <div class="box">
+                        <div class="top-bar-team"></div>
+                        <div class="nav">
+                            <i class="verify fas fa-check-circle"></i>
+                            <input class="heart-btn" type="checkbox" id="heart-btn-3">
+                            <label class="heart" for="heart-btn-3"></label>
+                        </div>
+                        <div class="details">
+                            <img src="/Images/b_sokren.jpg" alt="">
+                        </div>
+                        <strong>Sanh Sokhen</strong>
+                        <p>sokhen@ebmcambodia.com</p>
+                        <div class="btn">
+                            <a href="#"><i class="fas fa-clipboard-list"></i>Tax Accounting</i></a>
+                            <a href="#"><i class="fas fa-eye"></i>View</a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other members -->
+                    <div class="box">
+                        <div class="top-bar-team"></div>
+                        <div class="nav">
+                            <i class="verify fas fa-check-circle"></i>
+                            <input class="heart-btn" type="checkbox" id="heart-btn-4">
+                            <label class="heart" for="heart-btn-4"></label>
+                        </div>
+                        <div class="details">
+                            <img src="" alt="">
+                        </div>
+                        <strong>Thong Ly E Fong</strong>
+                        <p>efong@ebmcambodia.com</p>
+                        <div class="btn">
+                            <a href="#"><i class="fas fa-clipboard-list"></i>Tax Accounting</i></a>
+                            <a href="#"><i class="fas fa-eye"></i>View</a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other members -->
+                    <div class="box">
+                        <div class="top-bar-team"></div>
+                        <div class="nav">
+                            <i class="verify fas fa-check-circle"></i>
+                            <input class="heart-btn" type="checkbox" id="heart-btn-5">
+                            <label class="heart" for="heart-btn-5"></label>
+                        </div>
+                        <div class="details">
+                            <img src="/Images/Panha.jpg" alt="">
+                        </div>
+                        <strong>Panha</strong>
+                        <p>it@ebmcambodia.com</p>
+                        <div class="btn">
+                            <a href="#"><i class="fas fa-clipboard-list"></i>Software Development,IT</i></a>
+                            <a href="#"><i class="fas fa-eye"></i>View</a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other members -->
+                    <div class="box">
+                        <div class="top-bar-team"></div>
+                        <div class="nav">
+                            <i class="verify fas fa-check-circle"></i>
+                            <input class="heart-btn" type="checkbox" id="heart-btn-6">
+                            <label class="heart" for="heart-btn-6"></label>
+                        </div>
+                        <div class="details">
+                            <img src="Images/vong.jpg" alt="">
+                        </div>
+                        <strong>Soem Vong</strong>
+                        <p>	ac@ebmcambodia.com</p>
+                        <div class="btn">
+                            <a href="#"><i class="fas fa-clipboard-list"></i>Tax Accounting</i></a>
+                            <a href="#"><i class="fas fa-eye"></i>View</a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other members -->
+                    <div class="box">
+                        <div class="top-bar-team"></div>
+                        <div class="nav">
+                            <i class="verify fas fa-check-circle"></i>
+                            <input class="heart-btn" type="checkbox" id="heart-btn-7">
+                            <label class="heart" for="heart-btn-7"></label>
+                        </div>
+                        <div class="details">
+                            <img src="" alt="">
+                        </div>
+                        <strong>Sokmengleap Va</strong>
+                        <p>leap@ebmcambodia.com</p>
+                        <div class="btn">
+                            <a href="#"><i class="fas fa-clipboard-list"></i>Tax Accounting</i></a>
+                            <a href="#"><i class="fas fa-eye"></i>View</a>
+                        </div>
+                    </div>
+                    <!-- Repeat for other members -->
+                    <div class="box">
+                        <div class="top-bar-team"></div>
+                        <div class="nav">
+                            <i class="verify fas fa-check-circle"></i>
+                            <input class="heart-btn" type="checkbox" id="heart-btn-8">
+                            <label class="heart" for="heart-btn-8"></label>
+                        </div>
+                        <div class="details">
+                            <img src="" alt="">
+                        </div>
+                        <strong>Soeun Sokhorn</strong>
+                        <p>frontdesk@ebmcambodia.com</p>
+                        <div class="btn">
+                            <a href="#"><i class="fas fa-clipboard-list"></i>Customer Service</i></a>
+                            <a href="#"><i class="fas fa-eye"></i>View</a>
+                        </div>
+                    </div>
+                    
+        
+                    <!-- Add more .box elements as needed -->
+                </div>
+            </section>
         </div>
         <!-- Testimonials End -->
 
