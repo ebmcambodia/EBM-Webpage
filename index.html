@@ -1347,6 +1347,19 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
+    <script>
+        const path = window.location.pathname;
+        if (path !== '/' && !path.endsWith('.html')) {
+          const possibleHtml = path.replace(/\/$/, '') + '.html';
+          fetch(possibleHtml, { method: 'HEAD' })
+            .then(response => {
+              if (response.ok) {
+                window.location.replace(possibleHtml);
+              }
+            });
+        }
+      </script>
+
 </body>
 
 </html>

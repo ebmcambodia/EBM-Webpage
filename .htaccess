@@ -1,6 +1,6 @@
 RewriteEngine On
 
-# If the requested file doesn't exist but the same name with .html exists
+# Remove .html extension
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)$ $1.html [L]
