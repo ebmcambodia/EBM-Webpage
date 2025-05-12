@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>E B M CO.,LTD</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/img/Logo.jpg"> <!-- Corrected type to image/x-icon -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/img/favicon.ico">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body oncontextmenu="return false">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+         <!-- Top Bar Start -->
+         <div class="top-bar bg-dark text-light py-2 px-3">
+            <div class="container-fluid">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <!-- Left: Phone & Time -->
+                    <div class="d-flex align-items-center flex-shrink-0 me-3 mb-2">
+                        <small class="me-3 mb-0">
+                            <i class="fas fa-phone-alt text-warning me-1"></i>
+                            (+855) 10-888-310
+                        </small>
+                        <small class="mb-0">
+                            <i class="fas fa-clock text-warning me-1"></i>
+                            <span id="current-time">08:00 - 17:00</span>
+                        </small>
+                    </div>
+
+                    <!-- Center: Login & Language -->
+                    <div class="d-flex align-items-center flex-shrink-0 mb-2">
+                        <a href="/Maintenance/UnderMaintenace.html"
+                            class="text-light text-decoration-none d-flex align-items-center me-3">
+                            <i class="fas fa-lock text-warning me-1"></i>
+                            <small>Login</small>
+                        </a>
+                        <div class="dropdown nav-item nav-link ">
+                            <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="langDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                🌐 ប្តូរភាសា
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                                <li><a class="dropdown-item" href="/index.html">🇬🇧 English</a></li>
+                                <li><a class="dropdown-item" href="/Language KH/KH.html">🇰🇭 Khmer</a></li>
+                                <li><a class="dropdown-item" href="?lang=zh">🇨🇳 中文</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Right: Social Media Icons -->
+                    <div class="d-flex align-items-center flex-shrink-0 gap-3 mb-2">
+                        <a href="https://www.facebook.com/ebm.coltd" class="text-light"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://kh.linkedin.com/company/ebm-co-ltd-" class="text-light"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+      <script>
+          function updateClock() {
+              const now = new Date();
+              const hours = now.getHours().toString().padStart(2, '0');
+              const minutes = now.getMinutes().toString().padStart(2, '0');
+              document.getElementById("current-time").textContent = `${hours}:${minutes}`;
+          }
+          updateClock();
+          setInterval(updateClock, 60000); // Update every minute
+      </script>
+      
+
+<style>
+  .dropdown-menu {
+  z-index: 1055; /* higher than typical navbar or modal z-indexes */
+}
+
+.top-bar {
+  position: relative;
+  z-index: 1050; /* ensure the top-bar stays above background elements */
+}
+  </style>
+
+        <!-- Navbar Start -->
+         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+            <a href="/Language KH/KH.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+                <span style="color: rgba(255, 108, 23, 0.808); font-size: 32px;">E B M CO.,LTD</span>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="/Language KH/KH.html" class="nav-item nav-link active">ទំព័ដើម</a>
+                    <a href="/Language KH/about.html" class="nav-item nav-link">អំពីក្រុមហ៊ុន</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ទាមទារ</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">បង្កើតវិក្កយបត្រ</a>
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">កម្មវិធីឥតគិតថ្លៃ</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">សេវាកម្មរបស់យើង</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">ប្រភេទ</a>
+                            <a href="/Language KH/TaxationService.html" class="dropdown-item">សេវាកម្មបង់ពន្ធ</a>
+                            <a href="/Language KH/AccountingService.html" class="dropdown-item">សេវាកម្មគណនេយ្យ</a>
+                            <a href="/Language KH/RecruitmentService.html"
+                                class="dropdown-item">សេវាកម្មជ្រើសរើសបុគ្គលិក</a>
+                            <a href="/Language KH/PayrollService.html" class="dropdown-item">សេវាបើកប្រាក់បៀវត្សរ៍</a>
+                            <a href="/Language KH/HROutsourcing.html" class="dropdown-item">ធនធានមនុស្សក្រៅប្រព័ន្ធ</a>
+                            <a href="/Language KH/StatutoryComplianceService.html"
+                                class="dropdown-item">សេវាអនុលោមភាព</a>
+                            <a href="/Language KH/SkillDevelopment.html" class="dropdown-item">ការអភិវឌ្ឍន៍ជំនាញ</a>
+                            <a href="/Language KH/Callcenter.html" class="dropdown-item">មជ្ឈមណ្ឌលហៅទូរស័ព្ទ</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ការងារ</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Language KH/job-list.html" class="dropdown-item">បញ្ជីការងារ</a>
+                            <a href="http://recruitment.ebmcambodia.com/" class="dropdown-item">ការជ្រើសរើសបុគ្គលិក</a>
+                            <a href="https://recruitment.ebmcambodia.com/index.php?q=hiring"
+                                class="dropdown-item">អាជីព</a>
+                        </div>
+                    </div>
+                    <a href="/Language KH/contact.html" class="nav-item nav-link">ទំនាក់ទំនង</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">ផ្សេងៗ</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <div class="dropdown-item d-flex justify-content-between align-items-center">
+
+                            </div>
+                            <a href="/newspage/newspage.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>ព័ត៌មាន</span>
+                                <i class="fas fa-newspaper text-primary"></i>
+                            </a>
+                            <a href="/Maintenance/UnderMaintenace.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>កម្មវិធី</span>
+                                <i class="fas fa-laptop-code text-primary"></i>
+                            </a>
+                            <a href="/Maintenance/UnderMaintenace.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>ព្រឹត្តិការណ៍</span>
+                                <i class="fas fa-calendar-alt text-primary"></i>
+                            </a>
+
+                            <a href="/Maintenance/UnderMaintenace.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>AI EBM</span>
+                                <i class="fas fa-robot text-primary"></i>
+                            </a>
+                            <a href="/Maintenance/UnderMaintenace.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>កម្មវិធីទូរស័ព្ទ</span>
+                                <i class="fas fa-mobile-alt text-primary"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/Maintenance/UnderMaintenace.html"
+                    class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">ចុះឈ្មោះ</a>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+         
+
+        <section class="home">
+            <div class="content animate-on-scroll">
+              <h1>សេវាកម្មរបស់យើង.<br><span>សេវាកម្មប្រាក់ខែ</span></h1>
+              <p>យើងផ្តល់ជូននូវសេវាកម្មបើកប្រាក់បៀវត្សរ៍ដែលអាចបត់បែនបាន និងអាចប្ដូរតាមបំណងដល់សហគ្រាសធុនតូចមធ្យម (SME) និងសាជីវកម្មពហុជាតិ (MNC) អស់រយៈពេលជាច្រើនឆ្នាំ។ រាល់ព័ត៌មានបើកប្រាក់បៀវត្សរ៍គឺរក្សាការសម្ងាត់ខ្ពស់។ យើងជឿថាយើងជាដៃគូអាជីវកម្មដែលជឿទុកចិត្តបំផុតនៅក្នុងទីផ្សារសម្រាប់សេវាកម្មបើកប្រាក់បៀវត្សរ៍នេះ.</p>
+              
+              <a href="#" class="btn pulse">Read More</a>
+             
+              <p>
+                <div>
+                    <a href="RecruitmentService.html" class="btn">ត្រឡប់ទៅវិញ</a>
+                    <a href="HROutsourcing.html" class="btn pulse">ទំព័របន្ទាប់</a>
+                </div>
+              </p>
+              
+            </div>
+          
+            <!-- 👇 Animated Image Container with ID -->
+            <div class="image-box animate-on-scroll" id="animated-image">
+              <img src="Images/3Dpayroll-removebg-preview.png" alt="Accounting Illustration" class="animated-img">
+            </div>
+          
+            <div class="media-icons animate-on-scroll">
+              <a href="#"><i class="fab fa-facebook-f bounce"></i></a>
+              <a href="#"><i class="fab fa-instagram bounce"></i></a>
+              <a href="#"><i class="fab fa-twitter bounce"></i></a>
+            </div>
+          </section>
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const animatedElements = document.querySelectorAll('.animate-on-scroll');
+          
+              function animateOnScroll() {
+                const triggerBottom = window.innerHeight * 0.85;
+          
+                animatedElements.forEach(el => {
+                  const elementTop = el.getBoundingClientRect().top;
+          
+                  if (elementTop < triggerBottom) {
+                    el.classList.add('show');
+                  }
+                });
+              }
+          
+              window.addEventListener('scroll', animateOnScroll);
+              animateOnScroll(); // Run on load
+            });
+          </script>
+
+         <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/68060013d6f64619157573b9/1ipbn0jnj';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+
+          <!-- <section id="about">
+            <div class="content">
+              <h1>About Us</h1>
+              <p>This is the about page content. More info about your service can go here.</p>
+              <a href="#home" class="btn">Back to Home</a>
+            </div>
+          </section> -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
