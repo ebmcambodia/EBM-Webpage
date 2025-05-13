@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <title>E B M CO.,LTD</title>
-    <link rel="shortcut icon" type="image/x-icon" href="img/Logo.jpg"> <!-- Corrected type to image/x-icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/Logo.jpg"> <!-- Corrected type to image/x-icon -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta name="description" content="">
 
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +22,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body oncontextmenu="return false">
@@ -59,31 +59,35 @@
 
           <!-- Center: Login & Language -->
           <div class="d-flex align-items-center flex-shrink-0 mb-2">
-              <a href="login.html" class="text-light text-decoration-none d-flex align-items-center me-3">
-                  <i class="fas fa-lock text-warning me-1"></i>
-                  <small>Login</small>
-              </a>
-              <div class="dropdown">
-                  <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                      Language
-                  </button>
-                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
-                      <li><a class="dropdown-item" href="?lang=en">🇬🇧 English</a></li>
-                      <li><a class="dropdown-item" href="?lang=km">🇰🇭 Khmer</a></li>
-                      <li><a class="dropdown-item" href="?lang=zh">🇨🇳 中文</a></li>
-                  </ul>
-              </div>
-          </div>
+                        <a href="/Maintenance/UnderMaintenace.html"
+                            class="text-light text-decoration-none d-flex align-items-center me-3">
+                            <i class="fas fa-lock text-warning me-1"></i>
+                            <small>登录</small>
+                        </a>
+                        <div class="dropdown nav-item nav-link ">
+                            <button class="btn btn-sm btn-outline-light dropdown-toggle" type="button" id="langDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                🌐 更改语言
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                                <li><a class="dropdown-item" href="/index.html">🇬🇧 English</a></li>
+                                <li><a class="dropdown-item" href="/Language CN/KH.html">🇰🇭 Khmer</a></li>
+                                <li><a class="dropdown-item" href="?lang=zh">🇨🇳 中文</a></li>
+                            </ul>
+                        </div>
+                    </div>
 
-          <!-- Right: Social Media Icons -->
-          <div class="d-flex align-items-center flex-shrink-0 gap-3 mb-2">
-              <a href="https://facebook.com" class="text-light"><i class="fab fa-facebook-f"></i></a>
-              <a href="https://twitter.com" class="text-light"><i class="fab fa-twitter"></i></a>
-              <a href="https://instagram.com" class="text-light"><i class="fab fa-instagram"></i></a>
-          </div>
-      </div>
-  </div>
-</div>
+                    <!-- Right: Social Media Icons -->
+                    <div class="d-flex align-items-center flex-shrink-0 gap-3 mb-2">
+                        <a href="https://www.facebook.com/ebm.coltd" class="text-light"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://kh.linkedin.com/company/ebm-co-ltd-" class="text-light"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <script>
   function updateClock() {
@@ -109,90 +113,109 @@ z-index: 1050; /* ensure the top-bar stays above background elements */
 </style>
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-            <a href="index.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
+            <a href="/Language CN/KH.html" class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5">
                 <span style="color: rgba(255, 108, 23, 0.808); font-size: 32px;">E B M CO.,LTD</span>
             </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-              <div class="navbar-nav ms-auto p-4 p-lg-0">
-                  <a href="index.html" class="nav-item nav-link ">Home</a>
-                  <a href="about.html" class="nav-item nav-link">About</a>
-                  <a href="#" class="nav-item nav-link">Resources</a>
-                  <div class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Service</a>
-                      <div class="dropdown-menu rounded-0 m-0">
-                          <a href="#" class="dropdown-item">Category</a>
-                          <a href="TaxationService.html" class="dropdown-item">Taxation Service</a>
-                          <a href="AccountingService.html" class="dropdown-item">Accounting Service</a>
-                          <a href="RecruitmentService.html" class="dropdown-item">Recruitment Service</a>
-                          <a href="PayrollService.html" class="dropdown-item">Payroll Service</a>
-                          <a href="HROutsourcing.html" class="dropdown-item">HR Outsourcing</a>
-                          <a href="StatutoryComplianceService.html" class="dropdown-item active">Statutory Compliance Service</a>
-                          <a href="SkillDevelopment.html" class="dropdown-item">Skill Development</a>
-                          <a href="Callcenter.html" class="dropdown-item">Call Center</a>
-                          
-                      </div>
-                  </div>
-                  <div class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
-                      <div class="dropdown-menu rounded-0 m-0">
-                          <a href="job-list.html" class="dropdown-item">Job List</a>
-                          <a href="http://recruitment.ebmcambodia.com/" class="dropdown-item">Recruitment</a>
-                          <a href="https://recruitment.ebmcambodia.com/index.php?q=hiring" class="dropdown-item">Carrer</a>
-                      </div>
-                  </div>
-                  <a href="contact.html" class="nav-item nav-link">Contact</a>
-                  <div class="nav-item dropdown">
-                      <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Other</a>
-                      <div class="dropdown-menu rounded-0 m-0">
-                          <div class="dropdown-item d-flex justify-content-between align-items-center">
-                              <span>News</span>
-                              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-newspaper"></i></button>
-                          </div>
-                          <div class="dropdown-item d-flex justify-content-between align-items-center">
-                              <span>Accounting Software</span>
-                              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-laptop-code"></i></button>
-                          </div>
-                          <div class="dropdown-item d-flex justify-content-between align-items-center">
-                              <span>Events</span>
-                              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-calendar-alt"></i></button>
-                          </div>
-                          
-                          <div class="dropdown-item d-flex justify-content-between align-items-center">
-                              <span>AI EBM</span>
-                              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-robot"></i></button>
-                          </div>
-                          <div class="dropdown-item d-flex justify-content-between align-items-center">
-                              <span>Mobile App</span>
-                              <button class="btn btn-sm btn-outline-primary"><i class="fas fa-mobile-alt"></i></button>
-                          </div>
-                      </div>
-                  </div>  
-              </div>
-              <a href="/Maintenance/UnderMaintenace.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Resigter</a>
-          </div>
-      </nav>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
+                data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="/Language CN/CN.html" class="nav-item nav-link active">家</a>
+                    <a href="/Language CN/about.html" class="nav-item nav-link">关于公司</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">必需的</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">创建发票</a>
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">免费软件</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">我们的服务</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Maintenance/UnderMaintenace.html" class="dropdown-item">类别</a>
+                            <a href="/Language CN/TaxationService.html" class="dropdown-item">税务服务</a>
+                            <a href="/Language CN/AccountingService.html" class="dropdown-item">会计服务</a>
+                            <a href="/Language CN/RecruitmentService.html" class="dropdown-item">招聘服务</a>
+                            <a href="/Language CN/PayrollService.html" class="dropdown-item">薪资服务</a>
+                            <a href="/Language CN/HROutsourcing.html" class="dropdown-item">外部人力资源</a>
+                            <a href="/Language CN/StatutoryComplianceService.html" class="dropdown-item">合规服务</a>
+                            <a href="/Language CN/SkillDevelopment.html" class="dropdown-item">技能发展</a>
+                            <a href="/Language CN/Callcenter.html" class="dropdown-item">呼叫中心</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">工作</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="/Language CN/job-list.html" class="dropdown-item">职位列表</a>
+                            <a href="http://recruitment.ebmcambodia.com/" class="dropdown-item">招聘</a>
+                            <a href="https://recruitment.ebmcambodia.com/index.php?q=hiring"
+                                class="dropdown-item">职业</a>
+                        </div>
+                    </div>
+                    <a href="/Language CN/contact.html" class="nav-item nav-link">接触</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">其他</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <div class="dropdown-item d-flex justify-content-between align-items-center">
+
+                            </div>
+                            <a href="/newspage/newspage.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>消息</span>
+                                <i class="fas fa-newspaper text-primary"></i>
+                            </a>
+                            <a href="/Maintenance/UnderMaintenace.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>应用领域</span>
+                                <i class="fas fa-laptop-code text-primary"></i>
+                            </a>
+                            <a href="/Maintenance/UnderMaintenace.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>活动</span>
+                                <i class="fas fa-calendar-alt text-primary"></i>
+                            </a>
+
+                            <a href="/Maintenance/UnderMaintenace.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>AI EBM</span>
+                                <i class="fas fa-robot text-primary"></i>
+                            </a>
+                            <a href="/Maintenance/UnderMaintenace.html"
+                                class="dropdown-item d-flex justify-content-between align-items-center">
+                                <span>移动应用</span>
+                                <i class="fas fa-mobile-alt text-primary"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/Maintenance/UnderMaintenace.html"
+                    class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">登记</a>
+            </div>
+        </nav>
         <!-- Navbar End -->
 
         <section class="home">
             <div class="content animate-on-scroll">
-              <h1>Our Service.<br><span>HROutsourcing</span></h1>
-              <p>One of the most complex areas for business to grip with is statutory compliance, leave all compliances worries to our expertise, we are your reliable back up.</p>
-              <p>Statutory compliance services include:</p>
-              <p>New company registration</p>
-              <p>New and renew all kind of licensing</p>
-              <p>Company dissolution</p>
-              <p >National Social Security Fund (NSSF)</p>
-              <p>Work permit</p>
-              <p>Trademark</p>
-              <a href="#" class="btn pulse">Read More</a>
+              <h1>我们的服务.<br><span>法定合规服务</span></h1>
+              <p>企业最需要应对的复杂领域之一是法定合规性，将所有合规性问题交给我们的专业知识，我们是您可靠的后盾.</p>
+              <p>法定合规服务包括:</p>
+              <p>新公司注册</p>
+              <p>新建和更新各类许可证</p>
+              <p>公司解散</p>
+              <p >全国社会保障基金（NSSF）</p>
+              <p>工作许可证</p>
+              <p>商标</p>
+              <a href="#" class="btn pulse">阅读更多</a>
              
               <p>
                 <div>
-                    <a href="HROutsourcing.html" class="btn">Go Back</a>
-                    <a href="SkillDevelopment.html" class="btn pulse">Next Page</a>
+                    <a href="/Language CN/HROutsourcing.html" class="btn">Go Back</a>
+                    <a href="/Language CN/SkillDevelopment.html" class="btn pulse">Next Page</a>
                 </div>
               </p>
               
@@ -200,7 +223,7 @@ z-index: 1050; /* ensure the top-bar stays above background elements */
           
             <!-- 👇 Animated Image Container with ID -->
             <div class="image-box animate-on-scroll" id="animated-image">
-              <img src="Images/3DStatutoryComplianceService-removebg-preview.png" alt="Accounting Illustration" class="animated-img">
+              <img src="/Images/3DStatutoryComplianceService-removebg-preview.png" alt="Accounting Illustration" class="animated-img">
             </div>
           
             <div class="media-icons animate-on-scroll">
@@ -255,13 +278,13 @@ s0.parentNode.insertBefore(s1,s0);
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/wow/wow.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/waypoints/waypoints.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
